@@ -1,0 +1,14 @@
+def return_the_longest_word(list1):
+  glossary_for_length = {}
+  for word in list1:
+    glossary_for_length[word] = len(word)
+  for v in glossary_for_length:
+   max_value = max(glossary_for_length.values())
+  return max_value
+
+def get_key(key, value):
+  for key, value in glossary_for_length.items():
+    if value == return_the_longest_word(list1):
+      return key
+
+return_the_longest_word(["fuck", "likeability"])
