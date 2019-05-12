@@ -1,9 +1,16 @@
+# Смотри, я буду идти по ходу выполнения и помечать это порядковыми цифрами, т.е. сначала читай 1), потом 2) и т.п.
+
 def return_the_longest_word(list1):
   glossary_for_length = {}
+  # 2) мы начинаем заполнять словарик соответствий слов их длине
   for word in list1:
     glossary_for_length[word] = len(word)
+  # 3) заполнили, теперь проходимся по ключам словарика (т.е. по словам)  
   for v in glossary_for_length:
+   # 4) и для каждого слова присваиваем переменной max_value максимальное значение списка значений словарика (т.е. длину самого длинного слова) 
+   # так как glossary_for_length.values() у нас [4, 11] (в случае, если мы работаетм с ["fuck", "likeability"]) то max([4, 11]) == 11
    max_value = max(glossary_for_length.values())
+  # 5) таким образом в max_value у нас число 11, которое мы и возвращаем
   return max_value
 
 def get_key(key, value):
@@ -11,4 +18,6 @@ def get_key(key, value):
     if value == return_the_longest_word(list1):
       return key
 
-return_the_longest_word(["fuck", "likeability"])
+# 1) выполнение начинается с вызова функции return_the_longest_word
+print return_the_longest_word(["fuck", "likeability"])
+# 6) на выводе будет возвращенное из return_the_longest_word число 11
