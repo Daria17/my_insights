@@ -1,0 +1,12 @@
+def cats_with_the_requested_color(cats_list, requested_color):
+  for cat in cats_list:
+    if cat not in cats_list:
+      cats_list.remove(cat)
+  print cats_list
+  selected_cats_names = []
+  for cat_name in cats_list:
+    cat_name = cats_list.get("name")
+    selected_cats_names.append(cat_name)
+  print selected_cats_names
+ 
+ cats_with_the_requested_color([{"name": "Barsik", "color": "white black"}, {"name": "Rizhik", "color": "red"}, {"name": "Snezhok", "color": "white"}, {"name": "Pushok", "color": "black red"}], "white")
